@@ -1,12 +1,13 @@
-
+import './style.css';
+import {FaClipboard} from "react-icons/fa"
 
 function App() {
   return (
     <div className="container">
       <div className="generator">
-        <h2>Password Generator</h2>
-        <div className="generotor_password">
-          <button>ClipBoard</button>
+        <h2 className="generator_header">Password Generator</h2>
+        <div className="generator_password">
+          <button className="generator_password_button"><FaClipboard/></button>
         </div>
         <div className="form_group">
           <label htmlFor="password-length">Password Length</label>
@@ -28,6 +29,7 @@ function App() {
           <label htmlFor="include_symbols">Include Symbols</label>
           <input name="include_symbols" id="include_symbols" type="checkbox"/>
         </div>
+        <button className="generator_btn">Generate New Password</button>
       </div>
     </div>
   );

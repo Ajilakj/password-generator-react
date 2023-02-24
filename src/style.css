@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: #3b3b98;
+}
+
+.container {
+  width: 350px;
+  margin: 0 auto;
+  padding-top: 200px;
+}
+
+.generator {
+  background-color: #23235b;
+  border-radius: 3px;
+  box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
+  padding: 20px;
+}
+.generator_header {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.generator_password {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 13px 10px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.generator_password_button {
+  position: absolute;
+  background-color: #3b3b98;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  height: 40px;
+  top: 2px;
+  right: 2px;
+  cursor: pointer;
+}
+.generator_btn {
+  background-color: #3b3b98;
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.form_group {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  margin-bottom: 5px;
+}
+.form_group input[type=number] {
+  width: 40px;
+}
+.form_group:last-of-type {
+  margin-bottom: 25px;
+}
+.form_group label {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}/*# sourceMappingURL=style.css.map */
