@@ -1,12 +1,12 @@
 import {useState, useRef} from 'react';
 import './style.css';
 import {FaClipboard} from "react-icons/fa"
-// import {toast} from "react-toastify";
+import {toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
 import {numberChars, upperCaseChars, lowerCaseChars, symbolChars} from "./Characters"
-// import { COPY_SUCCESS, ALERT } from "./Message"
+import { COPY_SUCCESS, ALERT } from "./Message"
 
-// toast.configure();
+toast.configure();
 
 function App() {
   const [password, setPassword] = useState("");
@@ -20,7 +20,7 @@ function App() {
 
   const handleCopy = () =>{
     copyFromClipboard();
-    // notification(COPY_SUCCESS)
+    notification(COPY_SUCCESS)
   }
 
   const copyFromClipboard = () =>{
@@ -36,11 +36,33 @@ function App() {
     }, 3000);
   }
 
-  
+  const notification = (message, Error = false) =>{
+    if(Error){
+      toast.error(message,{
+        position:toast.POSITION.TOP_CENTER,
+        autoClose:5000,
+        hideProgressBar:false,
+        closeOnClick:true,
+        pauseOnHover:true,
+        draggable:true,
+        progress:undefined
+      });
+    }else{
+      toast(message,{
+        position:toast.POSITION.TOP_CENTER,
+        autoClose:5000,
+        hideProgressBar:false,
+        closeOnClick:true,
+        pauseOnHover:true,
+        draggable:true,
+        progress:undefined
+      });
+    }
+  }
 
   const handleGeneratePassword = () =>{
     if(!upperCase && !lowerCase && !numbers && !symbols){
-      // notification(ALERT ,true);
+      notification(ALERT ,true);
     }
     let characterList="";
     if(upperCase) characterList+=upperCaseChars;
