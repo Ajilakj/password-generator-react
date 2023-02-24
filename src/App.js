@@ -1,7 +1,15 @@
+import {useState} from 'react';
 import './style.css';
 import {FaClipboard} from "react-icons/fa"
 
 function App() {
+  const [password, setPassword] = useState("");
+  const [passwordLength, setPasswordLength] = useState(25);
+  const [upperCase, setUpperCase] = useState(true);
+  const [lowerCase, setLowerCase] = useState(true);
+  const [numbers, setNumbers] = useState(true);
+  const [symbols, setSymbols] = useState(true);
+  
   return (
     <div className="container">
       <div className="generator">
