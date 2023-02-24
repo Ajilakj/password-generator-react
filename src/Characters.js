@@ -1,4 +1,4 @@
-const numbers="0123456789";
-const upperCase="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const lowerCase="abcdefghijklmnopqrstuvwxyz";
-const symbols="!@#$%^&*(){}|[]"
+export const numbers="0123456789";
+export const upperCase="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+export const lowerCase="abcdefghijklmnopqrstuvwxyz";
+export const symbols="!@#$%^&*(){}|[]"

@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import './style.css';
 import {FaClipboard} from "react-icons/fa"
+import {numbers, upperCase, lowerCase, symbols} from "./Characters"
 
 function App() {
   const [password, setPassword] = useState("");
@@ -10,6 +11,31 @@ function App() {
   const [numbers, setNumbers] = useState(true);
   const [symbols, setSymbols] = useState(true);
   
+  const handleGeneratePassword = () =>{
+    if(!upperCase && !lowerCase && !numbers && !symbols){
+      alert("Please select one at leaset 1 option");
+    }
+    let characterList="";
+    if(upperCase) characterList+=upperCase;
+    if(lowerCase) characterList+=lowerCase;
+    if(numbers) characterList+=numbers;
+    if(symbols) characterList+=symbols;
+    setPassword(passwordCreator(characterList))
+  };
+
+  const passwordCreator = (characterList) => {
+    let password="";
+    const length=characterList.length;
+    for(let i=0;i<passwordLength;i++){
+      const characterIndex = getRandomIndex(length);
+      password = password + characterList.charAt(characterIndex);
+    }
+  };
+
+  const getRandomIndex = (limit) => {
+    return Math.round(Math.random()*limit)
+  };
+
   return (
     <div className="container">
       <div className="generator">
